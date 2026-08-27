@@ -736,3 +736,50 @@ Fields used:
 - The five-per-ten-minute explanation limiter is in memory. It is appropriate for this single-instance hackathon MVP, but it resets on restart and would not coordinate across multiple instances.
 - Provider availability and model availability remain external dependencies. Fingerprints, neighbours, and comparisons remain usable if explanations fail.
 - Demo video and Devpost work were not started.
+
+## 2026-08-27 — Repository presentation and discoverability
+
+### Presentation audit
+
+- Audited the public README, GitHub description/homepage/topics, deployed application, repository structure, setup and analysis instructions, license, tracked files, media, file sizes, links, and secret/private-file exclusions.
+- The public application remained healthy and visually clear, with no browser console warnings or errors during the audit.
+- The main first-visit problems were repository presentation rather than product behaviour: the README had no immediate product visual, prominent demo links, example result, contributor guide, reproducible offline-analysis sequence, or extension entry points. The repository also had no discovery topics.
+- Confirmed the MIT license, correct deployed homepage, included processed outputs, ignored raw cache, ignored `.env`, and ignored `private_notes/`.
+
+### README and public documentation
+
+- Reorganized the README around a concise product statement, prominent Live Demo / How It Works / Run Locally links, a real result, an interpretable pipeline diagram, an exact five-feature table linked to implementations, repository structure, reproduction steps, API/deployment notes, extension ideas, and unchanged modelling limitations.
+- Made the deterministic boundary explicit: z-scores and Euclidean distance choose neighbours; Featherless/Qwen receives calculated evidence and only explains the comparison.
+- Added the validated Liverpool–Tottenham `0.620` result near the top and a qualified Leicester contrast. Both are explicitly described as results within the five-feature Premier League 2015/16 model.
+- Documented the actual raw-data preparation and seven-script analysis sequence. It is described as a sequence rather than falsely advertised as a one-command pipeline.
+- Added `CONTRIBUTING.md` with mathematical-definition, small-sample validation, season-coverage, assumptions, limitations, testing, and focused-PR requirements.
+- Added optional draft-only `docs/PROFILE_SNIPPET.md`, differentiated platform drafts in `docs/LAUNCH_KIT.md`, and `docs/SOCIAL_PREVIEW_SPEC.md`. No social post or GitHub profile content was published.
+
+### Authentic demo asset and repository hygiene
+
+- Found the local `Demo2Tactical.mov` recording (approximately 113 MB and 189 seconds) and did not add the source video to Git.
+- Produced `docs/assets/tactical-style-fingerprint-demo.gif` from the real deployed interface: 15 seconds, no audio, 800×450, approximately 5.9 MB. It shows the product, fingerprint, neighbours, comparison changes, and Liverpool–Tottenham result.
+- Removed the redundant one-line `frontend/CLAUDE.md` agent pointer. Kept `frontend/AGENTS.md` because Next.js generates and re-adds it for the installed framework version.
+- Moved the stale root `PROJECTCONTEXT.md` planning snapshot to `docs/history/PROJECT_CONTEXT.md` and marked it as historical so its early cosine/candidate-feature ideas are not confused with the finalized model.
+- Retained `PROJECT_LOG.md` as the chronological auditable development record. No history was rewritten.
+
+### GitHub metadata
+
+- Updated the repository description to: `Interpretable football tactical fingerprints, team similarity, and grounded AI explanations from StatsBomb event data.`
+- Kept the correct live-demo homepage and added relevant topics: `football-analytics`, `soccer-analytics`, `sports-analytics`, `statsbomb`, `data-science`, `football`, `python`, `pandas`, `fastapi`, `nextjs`, `machine-learning`, and `data-visualization`.
+- No stars, usage numbers, users, testimonials, awards, or popularity claims were invented.
+
+### Contributor issue entry points
+
+- Created five scoped public issues rather than artificial activity: additional Big Five league coverage (#4), PPDA robustness (#5), independent counterattack diagnostic (#6), Pass Verticality unit tests (#7), and visualization accessibility/readability (#8).
+- Marked only the synthetic Pass Verticality test task as `good first issue`; the larger data/modelling tasks remain ordinary enhancements, with the league extension also marked `help wanted`.
+
+### Validation
+
+- Verified all new local Markdown file/image links and the external demo, API health, repository, issues, StatsBomb repository, and raw match-list URLs.
+- Confirmed the GIF is 15.01 seconds, 800×450, and approximately 6.2 MB on disk.
+- Application code, metric definitions, similarity calculations, API behaviour, and deployment configuration were not modified.
+- All 8 backend tests passed. Frontend ESLint and the optimized Next.js production build passed, including TypeScript checks.
+- GitHub's Markdown renderer accepted the README, including the demo image, Mermaid block, and live-demo link.
+- Confirmed `.env`, `private_notes/`, raw data, Node dependencies, and build outputs remain ignored and untracked. No credential-like assignment or local absolute path was found in public project files.
+- Prepared the changes on a separate documentation/discoverability branch for a normal-history milestone; no model or application file changed.
