@@ -1,4 +1,6 @@
-# Tactical Style Fingerprint — Project Context
+# Tactical Style Fingerprint — Historical Project Context
+
+> This is the original planning snapshot, preserved for project history. It predates the finalized five-feature Euclidean model. See the repository [`README.md`](../../README.md) for the current implementation and methodology.
 
 ## Goal
 
